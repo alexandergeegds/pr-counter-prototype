@@ -1,1 +1,6 @@
+.env
+usage-data-config.json
+
+lib/extensions/_extensions.scss
 node_modules/
+public/
