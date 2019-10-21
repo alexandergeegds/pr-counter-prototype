@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+<!-- {% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %} -->
+{% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Section",
+        href: "#"
+      },
+      {
+        text: "Subsection"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+
+  <p class="govuk-body">Use this service to:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>count merged pull requests for git repositories on GitHub</li>
+  </ul>
+
+  {{ govukButton({
+    text: "Start now",
+    href: "#",
+    classes: "govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+  }) }}
+
+  <h2 class="govuk-heading-m">Before you start</h2>
+
+  <p class="govuk-body">You can only view merged pull requests for public repositories by default.</p>
+
+  <p class="govuk-body">If you authenticate, you may additionally include results from repositories you have view access to.</p>
+
+  <p class="govuk-body">If you produce a GitHub search URL, you may need to login to GitHub to see accurate results.</p>
+
+  <p class="govuk-body">If you wish to use the automated GitHub API integration, you will need to provide an API token with the "repo" permission .</p>
+{% endblock %}

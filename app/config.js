@@ -4,23 +4,23 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'Service name goes here',
+  serviceName: 'Count GitHub Pull Requests',
 
   // Default port that prototype runs on
   port: '3000',
 
   // Enable or disable password protection on production
-  useAuth: 'true',
+  useAuth: 'false',
 
   // Automatically stores form data, and send to all views
   useAutoStoreData: 'true',
 
   // Enable cookie-based session store (persists on restart)
   // Please note 4KB cookie limit per domain, cookies too large will silently be ignored
-  useCookieSessionStore: 'false',
+  useCookieSessionStore: 'true',
 
   // Enable or disable built-in docs and examples.
-  useDocumentation: 'true',
+  useDocumentation: 'false',
 
   // Force HTTP to redirect to HTTPS on production
   useHttps: 'true',
